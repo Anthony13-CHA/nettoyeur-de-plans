@@ -1,20 +1,9 @@
-# Nettoyeur de plans — V2
+# Nettoyeur de plans architecturaux — V3
 
-Version améliorée du prototype Streamlit.
+Version V3 du moteur de nettoyage.
 
-## Installation
+Objectif : supprimer annotations, textes et cotations tout en protégeant les lignes architecturales longues et cohérentes.
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+## Déploiement
 
-## Fonctionnement
-
-Le moteur combine normalisation du fond, détection prudente des éléments textuels, détection des annotations colorées et protection des longues lignes architecturales avant reconstruction locale.
-
-Cette V2 ne nécessite pas Tesseract ni de binaire système supplémentaire, afin de rester simple à déployer sur Streamlit Community Cloud.
-
-## Déploiement Streamlit
-
-Remplacer `app.py`, `requirements.txt` et `README.md` dans le dépôt GitHub relié à Streamlit Community Cloud.
+L'application Streamlit utilise `app.py` et `requirements.txt`.
