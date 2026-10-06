@@ -72,7 +72,7 @@ def line_protection(bw):
     lines = cv2.HoughLinesP(edges, 1, np.pi/180, threshold=max(25, min(h,w)//80),
                             minLineLength=max(25, min(h,w)//18), maxLineGap=8)
     if lines is not None:
-        for x1,y1,x2,y2 in lines[:,0]:
+        for x1,y1,x2,y2 in lines.reshape(-1, 4):
             dx, dy = x2-x1, y2-y1
             length = (dx*dx + dy*dy) ** 0.5
             if length < max(25, min(h,w)//25):
