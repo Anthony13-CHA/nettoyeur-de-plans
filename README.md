@@ -1,9 +1,19 @@
-# Nettoyeur de plans architecturaux — V3
+# Nettoyeur de plans — V5
 
-Version V3 du moteur de nettoyage.
+V5 utilise une analyse visuelle via l'API OpenAI pour localiser les textes, cotations et annotations avant une suppression locale prudente.
 
-Objectif : supprimer annotations, textes et cotations tout en protégeant les lignes architecturales longues et cohérentes.
+## Configuration Streamlit
 
-## Déploiement
+Dans **Manage app → Settings → Secrets**, ajouter :
 
-L'application Streamlit utilise `app.py` et `requirements.txt`.
+```toml
+OPENAI_API_KEY = "votre_cle_api"
+```
+
+Optionnel :
+
+```toml
+OPENAI_VISION_MODEL = "gpt-6-luna"
+```
+
+La clé API ne doit jamais être mise dans GitHub ni dans `app.py`.
